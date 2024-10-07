@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+```sh
+# Docker login / NHN Registry
+$ sudo docker login 44ce789b-kr1-registry.container.nhncloud.com/container-platform-registry
+Username: 1aXCA1Oj0FqA8OMhalOUhK2b
+Password: 3czGgxo7Xlpk5ojY7v4d
+
+sudo docker build -t 44ce789b-kr1-registry.container.nhncloud.com/container-platform-registry/edge-fe-sample02 .
+
+docker push 44ce789b-kr1-registry.container.nhncloud.com/container-platform-registry/edge-fe-sample02
+```
