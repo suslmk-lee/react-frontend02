@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './App.css';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080'
+
 const App = () => {
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://133.186.228.94:31031/api/data');
+            const response = await fetch(`${API_BASE_URL}/api/data`);
             if (response.ok) {
                 const result = await response.json();
                 const newDataPoint = {
