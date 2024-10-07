@@ -7,7 +7,7 @@ const App = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://backend-service:8080/api/data');
+            const response = await fetch('http://133.186.228.94:31031/api/data');
             if (response.ok) {
                 const result = await response.json();
                 const newDataPoint = {
