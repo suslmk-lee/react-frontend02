@@ -76,6 +76,7 @@ Username: 1aXCA1Oj0FqA8OMhalOUhK2b
 Password: 3czGgxo7Xlpk5ojY7v4d
 
 sudo docker build -t 44ce789b-kr1-registry.container.nhncloud.com/container-platform-registry/edge-fe-sample02 .
+sudo docker build --build-arg REACT_APP_API_BASE_URL=http://133.186.228.94:31031 -t 44ce789b-kr1-registry.container.nhncloud.com/container-platform-registry/edge-fe-sample02 .
 
 docker push 44ce789b-kr1-registry.container.nhncloud.com/container-platform-registry/edge-fe-sample02
 ```
