@@ -80,3 +80,5 @@ sudo docker build --build-arg REACT_APP_API_BASE_URL=http://133.186.228.94:31031
 
 docker push 44ce789b-kr1-registry.container.nhncloud.com/container-platform-registry/edge-fe-sample02
 ```
+
+//const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
