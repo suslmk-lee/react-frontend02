@@ -23,9 +23,10 @@ const AverageChartComponent = ({ averages }) => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="sunlight" stroke="#8884d8" name="Avg Sunlight (%)" dot={true} animationDuration={100} />
+                    <Line type="monotone" dataKey="lightQuantity" stroke="#8884d8" name="Avg Sunlight (%)" dot={true} animationDuration={100} />
                     <Line type="monotone" dataKey="humidity" stroke="#82ca9d" name="Avg Humidity (%)" dot={true} animationDuration={100} />
-                    <Line type="monotone" dataKey="powerOutput" stroke="#ff7300" name="Avg Power Output (kW)" dot={true} animationDuration={100} />
+                    <Line type="monotone" dataKey="batteryVoltage" stroke="#ff7300" name="Avg Battery(V)" dot={true} animationDuration={100} />
+                    <Line type="monotone" dataKey="solarVoltage" stroke="#297300" name="Avg Solar(V)" dot={true} animationDuration={100} />
                 </LineChart>
             </ResponsiveContainer>
         </div>

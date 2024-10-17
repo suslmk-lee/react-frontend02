@@ -31,7 +31,7 @@ const LineChartComponent = ({ data }) => {
                     <Legend />
                     <Line
                         type="monotone"
-                        dataKey="sunlight"
+                        dataKey="lightQuantity"
                         stroke="#8884d8"
                         name="Sunlight (%)"
                         dot={false}
@@ -47,9 +47,17 @@ const LineChartComponent = ({ data }) => {
                     />
                     <Line
                         type="monotone"
-                        dataKey="powerOutput"
+                        dataKey="batteryVoltage"
                         stroke="#ff7300"
-                        name="Power Output (kW)"
+                        name="Battery(V)"
+                        dot={false}
+                        animationDuration={10}
+                    />
+                    <Line
+                        type="monotone"
+                        dataKey="solarVoltage"
+                        stroke="#297300"
+                        name="Solar(V)"
                         dot={false}
                         animationDuration={10}
                     />

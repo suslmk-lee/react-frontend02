@@ -17,9 +17,9 @@ const DataTable = ({ data }) => {
                     {data.map((point, index) => (
                         <tr key={index}>
                             <td>{point.time}</td>
-                            <td>{point.sunlight.toFixed(2)}</td>
-                            <td>{point.humidity.toFixed(2)}</td>
-                            <td>{point.powerOutput.toFixed(2)}</td>
+                            <td>{point.lightQuantity}</td>
+                            <td>{point.humidity}</td>
+                            <td>{point.batteryVoltage}</td>
                         </tr>
                     ))}
                 </tbody>

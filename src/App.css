@@ -19,8 +19,9 @@ body {
   margin-bottom: 20px;
 }
 
-.content-container {
-  display: flex;
+/* 상단 컨텐츠 컨테이너 (그래프 + 맵) */
+.top-content-container {
+  display: flex;  /* 그래프와 맵을 가로로 배치 */
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
@@ -28,28 +29,40 @@ body {
   margin-bottom: 20px;
 }
 
+.left-section {
+  flex: 7; /* 실시간 그래프가 차지하는 공간 비율 (70%) */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.right-section {
+  flex: 3; /* 맵이 차지하는 공간 비율 (30%) */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 중단 테이블 컨테이너 */
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* 하단 평균 그래프 및 테이블 */
 .average-content-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
   gap: 20px;
-}
-
-.left-container {
-  flex: 7; /* 70% 너비 */
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.right-container {
-  flex: 3; /* 30% 너비 */
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .average-chart-container {
@@ -62,17 +75,6 @@ body {
 
 .average-table-container {
   flex: 3;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.average-container {
-  margin-top: 20px;
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
@@ -124,11 +126,11 @@ tbody tr {
 
 /* 반응형 처리 */
 @media (max-width: 768px) {
-  .content-container, .average-content-container {
+  .top-content-container, .average-content-container {
     flex-direction: column;
   }
-  
-  .left-container, .right-container, .average-chart-container, .average-table-container {
+
+  .left-section, .right-section, .average-chart-container, .average-table-container {
     width: 100%;
     margin-bottom: 20px;
   }

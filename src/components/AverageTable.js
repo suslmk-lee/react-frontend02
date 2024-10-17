@@ -10,16 +10,16 @@ const AverageTable = ({ averages }) => {
                         <th>Time</th>
                         <th>Sunlight (%)</th>
                         <th>Humidity (%)</th>
-                        <th>Power Output (kW)</th>
+                        <th>Battery (V)</th>
                     </tr>
                 </thead>
                 <tbody>
                     {averages.map((avg, index) => (
                         <tr key={index}>
                             <td>{avg.time}</td>
-                            <td>{avg.sunlight}</td>
+                            <td>{avg.lightQuantity}</td>
                             <td>{avg.humidity}</td>
-                            <td>{avg.powerOutput}</td>
+                            <td>{avg.batteryVoltage}</td>
                         </tr>
                     ))}
                 </tbody>
