@@ -8,7 +8,6 @@ const LineChartComponent = ({ data }) => {
         if (data.length === 0) return;
 
         setChartData((prevData) => {
-            // 최신 데이터를 추가하고 최대 20개를 유지하면서 자연스럽게 이동
             const updatedData = [...prevData, data[data.length - 1]];
             if (updatedData.length > 20) {
                 return updatedData.slice(-20); // 최신 20개 데이터만 유지
@@ -33,7 +32,7 @@ const LineChartComponent = ({ data }) => {
                         type="monotone"
                         dataKey="lightQuantity"
                         stroke="#8884d8"
-                        name="Sunlight (%)"
+                        name="Sunlight"
                         dot={false}
                         animationDuration={10}
                     />

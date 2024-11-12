@@ -5,7 +5,6 @@ RUN npm install
 
 COPY . .
 
-# 환경 변수를 빌드 시점에 설정
 ARG REACT_APP_API_BASE_URL
 ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
 

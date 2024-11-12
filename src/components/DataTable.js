@@ -8,9 +8,10 @@ const DataTable = ({ data }) => {
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Sunlight (%)</th>
+                        <th>Sunlight</th>
+                        <th>temperature</th>
                         <th>Humidity (%)</th>
-                        <th>Power Output (kW)</th>
+                        <th>Bettery (V)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -18,6 +19,7 @@ const DataTable = ({ data }) => {
                         <tr key={index}>
                             <td>{point.time}</td>
                             <td>{point.lightQuantity}</td>
+                            <td>{point.temperature}</td>
                             <td>{point.humidity}</td>
                             <td>{point.batteryVoltage}</td>
                         </tr>

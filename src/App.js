@@ -21,14 +21,14 @@ const App = () => {
             if (response.ok) {
                 const result = await response.json();
                 
-                console.log('Fetched Data from Backend:', result); // 데이터를 가져오는지 확인하는 로그
+                console.log('Fetched Data from Backend:', result);
 
                 // 최신 데이터를 사용하여 newDataPoint 생성
                 const latestData = result[0]; // 가장 최신 데이터 사용
                 const newDataPoint = {
                     time: new Date(latestData.timestamp).toLocaleTimeString(),
                     humidity: latestData.humidity,
-                    temperature: latestData.temperature, // 온도 추가
+                    temperature: latestData.temperature,
                     lightQuantity: latestData.light_quantity,
                     batteryVoltage: latestData.battery_voltage,
                     solarVoltage: latestData.solar_voltage,
@@ -50,13 +50,8 @@ const App = () => {
     const calculateAverage = useCallback(() => {
         if (currentData.length === 0) return null;
     
-        // humidity가 유효한 값인지 확인 후 처리
         const humidityAvg = currentData.reduce((acc, val) => acc + (val.humidity || 0), 0) / currentData.length;
-        
-        // temperature가 유효한 값인지 확인 후 처리
         const temperatureAvg = currentData.reduce((acc, val) => acc + (val.temperature || 0), 0) / currentData.length;
-        
-        // lightQuantity가 유효한 값인지 확인 후 처리
         const lightQuantityAvg = currentData.reduce((acc, val) => acc + (val.lightQuantity || 0), 0) / currentData.length;
         const batteryVoltageAvg = currentData.reduce((acc, val) => acc + (val.batteryVoltage || 0), 0) / currentData.length;
         const solarVoltageAvg = currentData.reduce((acc, val) => acc + (val.solarVoltage || 0), 0) / currentData.length;
@@ -64,12 +59,12 @@ const App = () => {
 
         return {
             time: new Date().toLocaleTimeString().slice(0, 10),
-            humidity: humidityAvg || 0, // 값이 없을 경우 0 반환
-            temperature: temperatureAvg || 0, // 값이 없을 경우 0 반환
-            lightQuantity: lightQuantityAvg || 0, // 값이 없을 경우 0 반환
-            batteryVoltage: batteryVoltageAvg || 0,
-            solarVoltage: solarVoltageAvg || 0,
-            loadAmpere: loadAmpereAvg || 0,
+            humidity: humidityAvg.toFixed(2) || 0,
+            temperature: temperatureAvg.toFixed(2) || 0,
+            lightQuantity: lightQuantityAvg.toFixed(2) || 0,
+            batteryVoltage: batteryVoltageAvg.toFixed(2) || 0,
+            solarVoltage: solarVoltageAvg.toFixed(2) || 0,
+            loadAmpere: loadAmpereAvg.toFixed(2) || 0,
         };
     }, [currentData]);
     

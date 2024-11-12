@@ -6,7 +6,6 @@ const AverageChartComponent = ({ averages }) => {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
-        // 새로운 데이터가 추가될 때마다 chartData를 업데이트하여 애니메이션을 유발
         setChartData([...averages]);
     }, [averages]);
 
@@ -23,7 +22,7 @@ const AverageChartComponent = ({ averages }) => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="lightQuantity" stroke="#8884d8" name="Avg Sunlight (%)" dot={true} animationDuration={100} />
+                    <Line type="monotone" dataKey="lightQuantity" stroke="#8884d8" name="Avg Sunlight" dot={true} animationDuration={100} />
                     <Line type="monotone" dataKey="humidity" stroke="#82ca9d" name="Avg Humidity (%)" dot={true} animationDuration={100} />
                     <Line type="monotone" dataKey="batteryVoltage" stroke="#ff7300" name="Avg Battery(V)" dot={true} animationDuration={100} />
                     <Line type="monotone" dataKey="solarVoltage" stroke="#297300" name="Avg Solar(V)" dot={true} animationDuration={100} />

@@ -8,7 +8,7 @@ const AverageTable = ({ averages }) => {
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Sunlight (%)</th>
+                        <th>Sunlight</th>
                         <th>Humidity (%)</th>
                         <th>Battery (V)</th>
                     </tr>
